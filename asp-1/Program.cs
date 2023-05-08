@@ -1,4 +1,4 @@
-using asp_1;
+using BlogPlatform;
 internal class Program
 {
     private static void Main(string[] args) =>
@@ -6,7 +6,5 @@ internal class Program
     
 
     public static IHostBuilder CreateHostBuilder(string[] args) =>
-        Host.CreateDefaultBuilder(args)
-            .ConfigureWebHostDefaults(webBuilder =>
-                webBuilder.UseStartup<Startup>());
+        Host.CreateDefaultBuilder(args).ConfigureWebHostDefaults(webBuilder => webBuilder.UseStartup<Startup>());
 }

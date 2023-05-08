@@ -1,4 +1,4 @@
-﻿namespace asp_1
+﻿namespace BlogPlatform
 {
     public class Startup
     {
