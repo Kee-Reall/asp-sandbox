@@ -1,6 +1,6 @@
-﻿using BlogPlatform.Models;
+﻿using asp_1.Entity;
+using BlogPlatform.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Net.Mail;
 
 namespace BlogPlatform.Controllers
 {
@@ -11,14 +11,19 @@ namespace BlogPlatform.Controllers
     public class BlogController : ControllerBase
     {
 
-        private string[] blogs = new string[] { "Johney", "Cars", "Horney" };
+        private BlogEntity[] blogs = new BlogEntity[] 
+        { 
+            new BlogEntity("Johney", "nothing", "string.com"),
+            new BlogEntity("Carl", "Sobmreara", "kaspi.kz"),
+            new BlogEntity("Alex", "Vodka", "google.net")
+        };
 
         [HttpGet]
-        public ActionResult<string[]> GetMany() => blogs;
+        public ActionResult<BlogEntity[]> GetMany() => blogs;
 
 
         [HttpGet("{id}")]
-        public ActionResult<string> GetOne(string id) => blogs[1];        
+        public ActionResult<BlogEntity> GetOne(int id) => blogs[id];        
 
         [HttpPost]
         public ActionResult<IBlogInput> Create([FromBody]BlogInput inputBlog)
