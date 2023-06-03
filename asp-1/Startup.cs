@@ -1,10 +1,13 @@
-﻿namespace BlogPlatform
+﻿using BlogPlatform.Controllers;
+
+namespace BlogPlatform
 {
     public class Startup
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers(); 
+            services.AddControllers();
+            services.AddSingleton<BlogController>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

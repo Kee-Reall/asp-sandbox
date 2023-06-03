@@ -1,6 +1,4 @@
-﻿using BlogPlatform;
-
-namespace asp_1.Entity
+﻿namespace BlogPlatform.Entity
 {
     public class BlogEntity
     {

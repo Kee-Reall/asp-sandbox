@@ -1,6 +1,6 @@
-﻿using asp_1.Entity;
+﻿using Microsoft.AspNetCore.Mvc;
+using BlogPlatform.Entity;
 using BlogPlatform.Models;
-using Microsoft.AspNetCore.Mvc;
 
 namespace BlogPlatform.Controllers
 {
@@ -11,7 +11,7 @@ namespace BlogPlatform.Controllers
     public class BlogController : ControllerBase
     {
 
-        private BlogEntity[] blogs = new BlogEntity[] 
+        private readonly BlogEntity[] blogs = new BlogEntity[] 
         { 
             new BlogEntity("Johney", "nothing", "string.com"),
             new BlogEntity("Carl", "Sobmreara", "kaspi.kz"),
